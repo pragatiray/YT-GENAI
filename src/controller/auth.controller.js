@@ -10,7 +10,7 @@ async function registerUserController(req,res){
 
     if(!username,!email,!password){
         res.status(400).json({
-            message:"Please provide username,email and password"
+            message:"Please provide username,email and password " 
         })
     }
     const isUserAlreadyExists = await userModel.findOne({
